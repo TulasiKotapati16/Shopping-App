@@ -1,0 +1,100 @@
+
+     
+        
+       <!-- <div class="container">
+          <form [formGroup]="frmLogin" (ngSubmit)="onFormSubmit(frmLogin.value)"  >
+            <fieldset>
+               
+                <legend>Customer Login</legend>
+           <dl>
+               <dt>UserId</dt>
+               <dd><input type="text" formControlName="UserId"></dd>
+               <dd class="text-danger" *ngIf="UserId.touched && UserId.invalid">
+                   <span *ngIf="UserId.errors?.['required']">User Id Required</span>
+                   <span *ngIf="UserId.errors?.['minlength']">User Id too short.. min 4 chars</span>
+               </dd>
+               <dt>Password</dt>
+               <dd><input type="password" formControlName="Password"></dd>
+               <dd class="text-danger" *ngIf="Password.touched && Password.invalid">
+                  <span *ngIf="Password.errors?.['required']">Password Required</span>
+                  <span *ngIf="Password.errors?.['pattern']">Password 4 to 10 chars</span>
+               </dd>
+           </dl>
+           <button class="btn btn-primary" [disabled]="!frmLogin.valid">Login</button>
+           <h3 class="text-danger text-center">{{userError}}</h3>
+        </fieldset>
+        </form>
+        <br>
+        <a routerLink="/register">New User?</a>
+    
+    </div> -->
+    <div class="container-fluid">
+        <header>
+          <nav class="navbar ">
+              <div class="container-fluid">
+                  <div class="nav navbar-nav1">
+                      <!-- <a href="#" >
+                          <img src="../assets/LOGO.gif">                       
+                      </a> -->
+                      <a  class="nav-link btn" (click)="homeFn()"><i class="bi bi-house-door"></i>Home</a> 
+                      <a class="nav-link btn" (click)="productsFn()"><i class="bi bi-bag-plus-fill"></i> Shopping Catalog</a>      
+
+                  </div>
+                  <form>
+                    <!-- <div class="input-group">
+                     <span class="input-group-text"><i class="bi bi-search"></i></span>
+                      <input type="text" class="form-control" placeholder="Search Here..."> 
+                     
+                    </div> -->
+                  </form>
+                  <div>
+                    <h2>Smart-Shopping</h2>
+                  </div>
+                  <div class="nav navbar-nav1">
+                      <a  class="nav-link btn" (click)="loginfn()"><i class="bi bi-person"></i>Login</a>
+                      <a  class=" nav-link btn " (click)="SignUpfn()"><i class="bi bi-person"></i>SignUp</a>
+                     <!-- <a  class=" nav-link btn " routerLink="addtocart"><i class="bi bi-cart4"></i>Cart</a> -->
+      
+                  </div>
+              </div>
+          </nav>
+      </header>
+        
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h6>Please enter Email and Password !!</h6>
+
+                </div>
+                <form [formGroup]="frmLogin" (ngSubmit)="onFormSubmit(frmLogin.value)">
+                    
+                        <div class="mb-3">
+                            <label for="exampleInputEmail" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" formControlName="Email" placeholder="Enter Email" id="exampleInputEmail" aria-describedby="emailHelp">
+                            <div class="text-danger" *ngIf="Email.touched && Email.invalid">
+                                <span *ngIf="Email.errors?.['required']">*Please Enter Valid Email</span>
+
+                            </div>
+                            
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" placeholder="Enter Password" formControlName="Password" id="exampleInputPassword">
+                            <div class="text-danger" *ngIf="Password.touched && Password.invalid">
+                                <span *ngIf="Password.errors?.['required']">*Please Enter Valid Password</span>
+
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary subclick" [disabled]="!frmLogin.valid">Login</button> 
+                    
+                </form>
+                <a routerLink="/register" style="padding: 0px 0px 0px 200px;margin-top:10px;">New User? Click to SignUp</a>
+                <label class="text-danger text-center">{{userError}}</label>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,87 @@
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="container-fluid">
+  <header>
+    <nav class="navbar ">
+        <div class="container-fluid">
+            <div class="nav navbar-nav1">
+                <!-- <a href="#" >
+                    <img src="../assets/LOGO.gif">                       
+                </a> -->
+                <a  class="nav-link btn" (click)="homeFn()"><i class="bi bi-house-door"></i>Home</a>
+                <a class="nav-link btn" (click)="productsFn()"><i class="bi bi-bag-plus-fill"></i> Shopping Catalog</a> 
+                     
+
+            </div>
+            <form>
+              <!-- <div class="input-group">
+               <span class="input-group-text"><i class="bi bi-search"></i></span>
+                <input type="text" class="form-control" placeholder="Search Here..."> 
+               
+              </div> -->
+              <div>
+                <h2>Smart-Shopping</h2>
+              </div>
+            </form>
+            
+            <div class="nav navbar-nav1">
+                <a  class="nav-link btn" (click)="loginfn()"><i class="bi bi-person"></i>Login</a>
+                <a  class=" nav-link btn " (click)="SignUpfn()"><i class="bi bi-person"></i>SignUp</a>
+               <!-- <a  class=" nav-link btn " routerLink="addtocart"><i class="bi bi-cart4"></i>Cart</a> -->
+
+            </div>
+        </div>
+    </nav>
+</header>
+</div>
+
+
+<div id="topbanner" class="carousel carousel-dark carousel-fade slide banneralign" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+          <img src="../assets/carousel-img-1.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+          <img src="../assets/carousel-img-2.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+          <img src="../assets/carousel-img-3.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+          <img src="../assets/carousel-img-4.jpg" class="d-block w-100">
+      </div>
+  </div>
+  <button class=" carousel-control-prev" data-bs-target="#topbanner" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" data-bs-target="#topbanner" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+  </button>
+  <div class="carousel-indicators">
+      <button class="active" data-bs-target="#topbanner" data-bs-slide-to="0"></button>
+      <button  data-bs-target="#topbanner" data-bs-slide-to="1"></button>
+      <button data-bs-target="#topbanner" data-bs-slide-to="2"></button>
+      <button data-bs-target="#topbanner" data-bs-slide-to="3"></button>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="container-fluid mt-3 text-center alert-primary">
+  <h3>welcome to Online shopping store..</h3>
+  <p>Buy more products quality products with low price.....</p>
+</div>
+
+
+
+
+
+
+<!-- <h2>Shopping Home <span *ngIf="loginFlag">{{Email}} - <button (click)="SingoutClick()" class="btn btn-link">Signout</button> </span>
+</h2>
+<p>50% Off on Electronics</p> -->

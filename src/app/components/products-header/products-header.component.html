@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <header>
+        <nav class="navbar ">
+            <div class="container-fluid">
+                <div class="nav navbar-nav1"> 
+                  <a  class="nav-link btn" routerLink="home"><i class="bi bi-house-door"></i>Home</a>      
+                </div>
+                <div>
+                  <h2>Smart-Shopping</h2>
+                </div>
+                <div class="nav navbar-nav1">
+                    <a  class="nav-link btn" routerLink="login"><i class="bi bi-person"></i>SignOut</a>
+                    <a  class="nav-link btn" style="cursor:pointer" (click)="countercart($event);"><i class="bi bi-cart4"></i>[{{cartItemsCount}}] Cart</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+</div>

@@ -1,0 +1,80 @@
+
+    <div class="container-fluid">
+        <header>
+          <nav class="navbar ">
+              <div class="container-fluid">
+                  <div class="nav navbar-nav1">
+                      <!-- <a href="#" >
+                          <img src="../assets/LOGO.gif">                       
+                      </a> -->
+                      <a  class="nav-link btn" (click)="homeFn()"><i class="bi bi-house-door"></i>Home</a>
+                      <a class="nav-link btn" (click)="productsFn()"><i class="bi bi-bag-plus-fill"></i> Shopping Catalog</a>      
+
+                  </div>
+                  <form>
+                    <!-- <div class="input-group">
+                     <span class="input-group-text"><i class="bi bi-search"></i></span>
+                      <input type="text" class="form-control" placeholder="Search Here..."> 
+                     
+                    </div> -->
+                  </form>
+                  <div>
+                    <h2>Smart-Shopping</h2>
+                  </div>
+                  <div class="nav navbar-nav1">
+                      <a  class="nav-link btn" (click)="loginfn()"><i class="bi bi-person"></i>Login</a>
+                      <a  class=" nav-link btn " (click)="SignUpfn()"><i class="bi bi-person"></i>SignUp</a>
+                     <!-- <a  class=" nav-link btn " routerLink="addtocart"><i class="bi bi-cart4"></i>Cart</a> -->
+      
+                  </div>
+              </div>
+          </nav>
+      </header>
+</div>
+<div class="container" >
+    <div class="row">
+        <div class="card">
+            <div class="text-center">
+                <h1>SignUp</h1>
+                <h6>Register</h6>
+            </div>
+            <form (submit)="onSubmit(frmRegister.value)" #frmRegister="ngForm">
+                
+                    <div class="mb-3">
+                        <label for="exampleInputname" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="exampleInputname" ngModel #fullname="ngModel" name="fullname"
+                         aria-describedby="emailHelp" placeholder="Enter FullName">
+                        
+                        
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail" name="Email" ngModel #Email="ngModel"
+                         aria-describedby="emailHelp" placeholder="Enter Email">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputnumber" class="form-label">Mobile Number</label>
+                        <input type="email" class="form-control" id="exampleInputnumber" name="MobileNumber" ngModel #MobileNumber="ngModel"
+                         aria-describedby="emailHelp" placeholder="Enter MobileNumber">
+                        <div id="emailHelp" class="form-text"></div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="exampleInputPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword" 
+                        name="Password" ngModel #Password="ngModel" placeholder="Enter Password">
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label for="exampleInputconfirmPassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="exampleInputconfirmPassword"
+                        name="Confirmpassword" ngModel #Confirmpassword="ngModel" placeholder="Enter Confirmpassword">
+                    </div> -->
+                    <button type="submit" class="btn btn-primary subclick" >Sign Up</button> 
+                
+            </form>
+            <a routerLink="/login" style="margin-top:10px">Already registered? Click to Login!!</a>
+        </div>
+    </div>
+</div>
